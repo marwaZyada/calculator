@@ -15,12 +15,12 @@ btn.forEach((el) => {
 
 let calculate = () => eval(operation.value);
 result.addEventListener("click", () => {
-    if (operation.value !== " ") {
+    if (operation.value !== "") {
 
         try { operation.value = calculate() } catch (error) { operation.value = "error" }
     } else { operation.value = "please enter numbers"; }
 });
-clr.addEventListener("click", () => operation.value = " ")
+clr.addEventListener("click", () => operation.value = "")
 del.addEventListener("click", () => {
-    (operation.value === "error" || operation.value === "please enter numbers") ? operation.value = " ": operation.value = operation.value.slice(0, -1);
+    (operation.value === "error" || operation.value === "please enter numbers") ? operation.value = "": operation.value = operation.value.slice(0, -1);
 });
