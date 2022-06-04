@@ -21,4 +21,6 @@ result.addEventListener("click", () => {
     } else { operation.value = "please enter numbers"; }
 });
 clr.addEventListener("click", () => operation.value = " ")
-del.addEventListener("click", () => operation.value = operation.value.slice(0, -1));
+del.addEventListener("click", () => {
+    (operation.value === "error" || operation.value === "please enter numbers") ? operation.value = " ": operation.value = operation.value.slice(0, -1);
+});
